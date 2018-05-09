@@ -1,0 +1,25 @@
+{
+  "name": "restful-blog-app",
+  "version": "1.0.0",
+  "description": "This is sample blog to enhance and solidfy the concept of REST using Express, and MongoDB. It uses Material UI for the design.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcunanan05/material-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcunanan05/material-blog/issues"
+  },
+  "homepage": "https://github.com/jcunanan05/material-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17"
+  }
+}
