@@ -64,6 +64,19 @@ app.post('/blogs', (req, res) => {
   });
 });
 
+//show route
+app.get('/blogs/:id', (req, res) => {
+  Blog.findById(req.params.id, (err, foundBlog) => {
+    if (err) {
+      res.redirect('/blogs');
+      return;
+    }
+    
+    //success
+    res.render('show', {blog: foundBlog});
+  });
+});
+
 app.listen(process.env.PORT, process.env.IP, function() {
   console.log('Blog started!');
 });

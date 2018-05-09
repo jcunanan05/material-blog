@@ -2,9 +2,10 @@
   "name": "restful-blog-app",
   "version": "1.0.0",
   "description": "This is sample blog to enhance and solidfy the concept of REST using Express, and MongoDB. It uses Material UI for the design.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js -e ejs, js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "mongoose": "^5.0.17"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
   }
 }
