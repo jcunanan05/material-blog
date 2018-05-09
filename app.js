@@ -15,7 +15,7 @@ mongoose.connect('mongodb://localhost/material_blog');
 var blogSchema = new mongoose.Schema({
   title: String,
   image: String,
-  bode: String,
+  body: String,
   created: {type: Date, default: Date.now}
 });
 
@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
   res.redirect('/blogs');
 });
 
+//Index Route
 app.get('/blogs', (req, res) => {
   Blog.find({}, (err, blogs) => {
     if(err) {
@@ -40,6 +41,26 @@ app.get('/blogs', (req, res) => {
     }
     
     res.render('index', {blogs: blogs});
+  });
+});
+
+//New Route
+app.get('/blogs/new', (req, res) => {
+  res.render('new');
+});
+
+
+//Create Route
+app.post('/blogs', (req, res) => {
+  //create blog
+  Blog.create(req.body.blog, (err, newBlog) => {
+    if (err) {
+      res.render('new');
+      return;
+    }
+    
+    //redirect success
+    res.redirect('/blogs');
   });
 });
 
